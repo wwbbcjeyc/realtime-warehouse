@@ -23,6 +23,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
+
+/**
+ * 订单宽表
+ */
 public class OrderWideApp {
 
     public static void main(String[] args) throws Exception {

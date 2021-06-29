@@ -21,6 +21,10 @@ import java.time.Duration;
 //数据  Web/App -> Nginx -> SpringBoot -> Mysql(Binlog) -> FlinkApp -> Kafka(ods) -> Flink -> Kafka(dwd)/HBase(DIM) -> Flink -> Kafka(dwm) -> Flink ->  Kafka(dwm)
 
 //进程     Mock -> Mysql(Binlog) -> FlinkCDC -> Kafka(ods_base_db) -> BaseDBApp -> Kafka(dwd_*) -> OrderWideApp(Redis) -> Kafka(dwm_order_wide) -> PaymentWideApp -> Kafka(dwm_payment_wide)
+
+/**
+ * 支付宽表
+ */
 public class PaymentWideApp {
 
     public static void main(String[] args) throws Exception {
