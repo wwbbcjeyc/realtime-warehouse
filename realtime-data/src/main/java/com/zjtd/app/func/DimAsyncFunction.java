@@ -9,6 +9,7 @@ import org.apache.flink.streaming.api.functions.async.ResultFuture;
 import org.apache.flink.streaming.api.functions.async.RichAsyncFunction;
 
 import java.util.Collections;
+import java.util.Set;
 import java.util.concurrent.ThreadPoolExecutor;
 
 public abstract class DimAsyncFunction<T> extends RichAsyncFunction<T, T> implements JoinDimFunction<T> {
