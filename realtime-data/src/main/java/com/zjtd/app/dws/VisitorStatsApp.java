@@ -194,7 +194,8 @@ public class VisitorStatsApp {
 
         //TODO 7.将数据写出到ClickHouse
         result.print(">>>>>>>>>>");
-        result.addSink(ClickHouseUtil.getSinkFunc("insert into visitor_stats_201109 values(?,?,?,?,?,?,?,?,?,?,?,?)"));
+        //result.addSink(ClickHouseUtil.<VisitorStats>getSinkFunc("insert into visitor_stats values(?,?,?,?,?,?,?,?,?,?,?,?)"));
+        result.addSink(ClickHouseUtil.getSinkFunc("insert into visitor_stats values(?,?,?,?,?,?,?,?,?,?,?,?)"));
 
         //TODO 8.启动
         env.execute();
