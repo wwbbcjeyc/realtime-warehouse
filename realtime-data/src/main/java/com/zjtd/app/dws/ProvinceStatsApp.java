@@ -31,7 +31,7 @@ public class ProvinceStatsApp {
         //        //状态后端
         //        env.setStateBackend(new FsStateBackend("hdfs://hadoop102:8020/gmall-flink-201109/ck"));
         //        //设置访问HDFS的用户名
-        //        System.setProperty("HADOOP_USER_NAME", "atguigu");
+        //        System.setProperty("HADOOP_USER_NAME", "zjtd");
         StreamTableEnvironment tableEnv = StreamTableEnvironment.create(env);
 
         //TODO 2.使用DDL的方式创建表,提取时间戳字段生成WaterMark
