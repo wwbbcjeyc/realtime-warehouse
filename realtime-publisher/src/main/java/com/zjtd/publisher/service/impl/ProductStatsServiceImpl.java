@@ -1,11 +1,13 @@
 package com.zjtd.publisher.service.impl;
 
+import com.zjtd.publisher.bean.ProductStats;
 import com.zjtd.publisher.mapper.ProductStatsMapper;
 import com.zjtd.publisher.service.ProductStatsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * Desc: 商品统计Service接口实现类
@@ -20,5 +22,20 @@ public class ProductStatsServiceImpl implements ProductStatsService {
     @Override
     public BigDecimal getGMV(int date) {
         return productStatsMapper.getGMV(date);
+    }
+
+    @Override
+    public List<ProductStats> getProductStatsByTrademark(int date, int limit) {
+        return productStatsMapper.getProductStatsByTrademark(date,limit);
+    }
+
+    @Override
+    public List<ProductStats> getProductStatsByCategory3(int date, int limit) {
+        return productStatsMapper.getProductStatsByCategory3(date,limit);
+    }
+
+    @Override
+    public List<ProductStats> getProductStatsBySPU(int date, int limit) {
+        return productStatsMapper.getProductStatsBySPU(date,limit);
     }
 }
